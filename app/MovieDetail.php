@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
-class Movie extends Model
+class MovieDetail extends Model
 {
 
 
@@ -15,11 +15,18 @@ class Movie extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'file_path',
+        'date',
     ];
 
-    public function movie_details(){
-        return $this->hasMany('App\MovieDetail');
+    public function movie()
+    {
+        return $this->belongsTo('App\Movie');
     }
+
+    public function movie_times(){
+        return $this->hasMany('App\MovieTime');
+    }
+
+
 
 }

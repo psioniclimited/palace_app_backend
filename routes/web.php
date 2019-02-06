@@ -15,4 +15,5 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('movie', 'MovieController@test' );
+$router->get('getMovies', 'MovieController@getMovies' );
+$router->get('getMovieImage/{id}', 'MovieController@getMovieImage' );
