@@ -38,7 +38,7 @@ class MovieController extends Controller
 
     public function getMovieImage($id){
         $path = storage_path('app/images/'. (Movie::find($id))->file_path);
-
+//        dd($path);
         if (!File::exists($path)) {
             abort(404);
         }
