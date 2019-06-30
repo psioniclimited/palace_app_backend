@@ -15,5 +15,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('getMovies', 'MovieController@getMovies' );
+$router->get('movies', 'MovieController@index' );
 $router->get('getMovieImage/{id}', 'MovieController@getMovieImage' );
+///billing_app/kollan_somity

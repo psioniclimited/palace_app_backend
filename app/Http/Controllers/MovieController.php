@@ -29,8 +29,9 @@ class MovieController extends Controller
         ]);
     }
 
-    public function getMovies(){
+    public function index(){
         $movies = Movie::with('movie_details.movie_times')
+            ->where('valid',1)
             ->get();
 
         return response()->json($movies);

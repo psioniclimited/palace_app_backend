@@ -18,6 +18,10 @@ class Movie extends Model
         'name', 'file_path',
     ];
 
+    protected $hidden = [
+        'valid'
+    ];
+
     public function movie_details(){
         return $this->hasMany('App\MovieDetail');
     }

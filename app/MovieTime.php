@@ -23,6 +23,10 @@ class MovieTime extends Model
         return $this->belongsTo('App\MovieDetail');
     }
 
+    public function getTimeAttribute($value){
+
+    }
+
 
 
 }
